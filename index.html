@@ -35,6 +35,28 @@
     
     <!-- Bootstrap JS (required for collapse) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // AJAX submit with JS to show success/error
+  const form = document.querySelector('.ud-signup-form');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const resp = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      form.reset();
+      document.getElementById('signup-success').style.display = 'block';
+      document.getElementById('signup-error').style.display = 'none';
+    } else {
+      document.getElementById('signup-error').style.display = 'block';
+      document.getElementById('signup-success').style.display = 'none';
+    }
+  });
+</script>
+
   </head>
   <body>
     <!-- ====== Header Start ====== -->
@@ -70,7 +92,7 @@
               </div>
 
               <div class="navbar-btn d-none d-sm-inline-block">
-                <a class="ud-main-btn ud-white-btn cta-button" data-plan="trial" href="#pricing">
+                <a class="ud-main-btn ud-white-btn cta-button" data-plan="trial" href="#signup">
                   Try For Free
                 </a>
               </div>
@@ -96,7 +118,7 @@
               </p>
               <ul class="ud-hero-buttons">
                 <li>
-                  <a href="#pricing" class="ud-main-btn ud-white-btn cta-button" data-plan="basic">
+                  <a href="#signup" class="ud-main-btn ud-white-btn cta-button" data-plan="basic">
                     Start Your Certification Journey
                   </a>
                 </li>
@@ -213,7 +235,7 @@
               <p>
                 The AWS Certification AI Agent analyzes your learning patterns and identifies knowledge gaps in real-time, ensuring your study time is focused on what you need to learn most.
               </p>
-              <a href="#pricing" class="ud-main-btn cta-button" data-plan="premium">Get Started Today</a>
+              <a href="#signup" class="ud-main-btn cta-button" data-plan="premium">Get Started Today</a>
             </div>
           </div>
           <!-- <div class="ud-about-image">
@@ -287,10 +309,11 @@
                 </ul>
               </div>
               <div class="ud-pricing-footer">
-                <a href="#" class="ud-main-btn ud-white-btn cta-button" data-plan="professional">
+                <a href="#signup" class="ud-main-btn ud-white-btn cta-button" data-plan="professional">
                   Pre-Order Now (50% Off)
                 </a>
               </div>
+
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-10">
@@ -313,7 +336,7 @@
                 </ul>
               </div>
               <div class="ud-pricing-footer">
-                <a href="#" class="ud-main-btn ud-border-btn cta-button" data-plan="enterprise">
+                <a href="#signup" class="ud-main-btn ud-border-btn cta-button" data-plan="enterprise">
                   Pre-Order Now (50% Off)
                 </a>
               </div>
@@ -607,7 +630,7 @@
               <p>
                 Start your AWS certification journey with our AI-powered platform and cut your study time in half.
               </p>
-              <a href="#" class="ud-main-btn cta-button" data-plan="professional">Pre-Order Now</a>
+              <a href="#signup" class="ud-main-btn cta-button" data-plan="professional">Pre-Order Now</a>
             </div>
           </div>
           <!-- <div class="ud-about-image">
@@ -617,6 +640,55 @@
       </div>
     </section>
     <!-- ====== CTA Section End ====== -->
+
+                  <!-- ====== Early‑Access Signup ====== -->
+                  <section id="signup" class="ud-signup py-5">
+                    <div class="container">
+                      <div class="ud-section-title text-center mx-auto">
+                        <span>Get Early Access</span>
+                        <h2>Join Our Pre‑Launch Waitlist</h2>
+                        <p>Be the first to know when Cert Dragon goes live—and snag exclusive launch discounts.</p>
+                      </div>
+                      <form 
+                        action="https://formspree.io/f/xzzennky" 
+                        method="POST" 
+                        class="ud-signup-form row g-2 justify-content-center align-items-center mt-4"
+                      >
+                        <!-- honeypot to cut bots -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <div class="col-md-4">
+                          <input 
+                            type="text" 
+                            name="name" 
+                            class="form-control" 
+                            placeholder="Your Name" 
+                            required
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <input 
+                            type="email" 
+                            name="_replyto" 
+                            class="form-control" 
+                            placeholder="Your Email" 
+                            required
+                          >
+                        </div>
+                        <div class="col-md-2">
+                          <button type="submit" class="ud-main-btn w-100">Join the Waitlist</button>
+                        </div>
+                        <div class="col-10 text-center mt-2">
+                          <small class="text-success" id="signup-success" style="display:none;">
+                            🎉 Thanks! You’re on the list.
+                          </small>
+                          <small class="text-danger" id="signup-error" style="display:none;">
+                            ⚠️ Oops, something went wrong. Try again later.
+                          </small>
+                        </div>
+                      </form>
+                    </div>
+                  </section>
 
     <!-- ====== Footer Start ====== -->
     <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
