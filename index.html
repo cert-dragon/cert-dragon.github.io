@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AWS Certification AI Agent | Pass Your Exam in Half the Time</title>
+    <title>AWS Certification AI Agent | 90% Pass Rate System for the AWS Solutions Architect Associate Exam</title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="AWS Certification AI Agent | Pass Your Exam in Half the Time">
@@ -33,22 +33,8 @@
     <link rel="stylesheet" href="assets/css/lineicons.css" />
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
     
-    <!-- Analytics Tracking -->
-    <script>
-      // Simple variant tracking
-      window.onload = function() {
-        // Track which variant was shown (could be replaced with actual analytics)
-        localStorage.setItem('pageVisited', 'true');
-        
-        // Track conversion events
-        document.querySelectorAll('.cta-button').forEach(button => {
-          button.addEventListener('click', function(e) {
-            console.log('Conversion event: ' + e.target.dataset.plan);
-            // Replace with actual analytics tracking
-          });
-        });
-      };
-    </script>
+    <!-- Bootstrap JS (required for collapse) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <!-- ====== Header Start ====== -->
@@ -104,6 +90,7 @@
               <h1 class="ud-hero-title">
                 Pass Your AWS Solutions Architect Associate Certification in Half the Time
               </h1>
+              
               <p class="ud-hero-desc">
                 Cert Dragon is the world's first AI-powered certification agent that identifies your knowledge gaps and creates a personalized study plan tailored to your learning style. Get certified on your first attempt or your money back.
               </p>
@@ -229,9 +216,9 @@
               <a href="#pricing" class="ud-main-btn cta-button" data-plan="premium">Get Started Today</a>
             </div>
           </div>
-          <div class="ud-about-image">
+          <!-- <div class="ud-about-image">
             <img src="assets/images/about/about-image.svg" alt="AWS certification learning journey" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -337,147 +324,160 @@
     </section>
     <!-- ====== Pricing End ====== -->
 
-    <!-- ====== FAQ Start ====== -->
-    <section id="faq" class="ud-faq">
-      <div class="shape">
-        <img src="assets/images/faq/shape.svg" alt="shape" />
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="ud-section-title text-center mx-auto">
-              <span>FAQ</span>
-              <h2>Have Questions About AWS Certification?</h2>
-              <p>
-                Here are the most common questions we receive about our AI certification platform.
-              </p>
-            </div>
-          </div>
+<!-- ====== FAQ Start ====== -->
+<section id="faq" class="ud-faq">
+  <div class="shape">
+    <img src="assets/images/faq/shape.svg" alt="shape" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ud-section-title text-center mx-auto">
+          <span>FAQ</span>
+          <h2>Have Questions About AWS Certification?</h2>
+          <p>
+            Here are the most common questions we receive about our AI certification platform.
+          </p>
         </div>
+      </div>
+    </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>How does the AI agent actually help me learn faster?</span>
-                </button>
-                <div id="collapseOne" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Our AI platform identifies your knowledge gaps through intelligent assessments and creates a personalized study plan that focuses your time on weak areas. It adapts in real-time as you learn, ensuring you're not wasting time on concepts you've already mastered.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>Which AWS certifications do you support?</span>
-                </button>
-                <div id="collapseTwo" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    We currently support all Associate and Professional level AWS certifications, including Solutions Architect, Developer, SysOps Administrator, DevOps Engineer, and Specialty certifications. Our platform is continuously updated to match the latest AWS exam requirements.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>How does the Pass Guarantee work?</span>
-                </button>
-                <div id="collapseThree" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    If you complete our recommended study plan and don't pass your certification exam on the first attempt, we'll cover your exam retake fee and provide specialized coaching to ensure your success on the next attempt. This guarantee is included in our Professional and Enterprise plans.
-                  </div>
-                </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+          <div class="accordion">
+            <button
+              class="ud-faq-btn"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <span class="icon flex-shrink-0">
+                <i class="lni lni-chevron-down"></i>
+              </span>
+              <span>How does the AI system help me pass the Solutions Architect exam?</span>
+            </button>
+            <div id="collapseOne" class="accordion-collapse collapse show">
+              <div class="ud-faq-body">
+                Our specialized AWS SAA AI identifies your knowledge gaps through intelligent assessments and creates a personalized study plan that focuses your time on weak areas. It adapts in real-time as you learn, ensuring you're not wasting time on concepts you've already mastered, and specifically targets the Solutions Architect exam domains.
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>How much time will I need to prepare for certification?</span>
-                </button>
-                <div id="collapseFour" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    With our AI-powered platform, most users can prepare for Associate-level exams in 4-6 weeks and Professional-level exams in a 8-10 weeks of focused study. This is approximately 40% faster than traditional study methods, as our adaptive learning system eliminates wasted study time.
-                  </div>
-                </div>
+        </div>
+        <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+          <div class="accordion">
+            <button
+              class="ud-faq-btn"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              <span class="icon flex-shrink-0">
+                <i class="lni lni-chevron-down"></i>
+              </span>
+              <span>Is this optimized for the latest SAA-C03 exam?</span>
+            </button>
+            <div id="collapseTwo" class="accordion-collapse collapse">
+              <div class="ud-faq-body">
+                Yes, our platform is specifically designed for the latest AWS Solutions Architect Associate (SAA-C03) exam. Our content is continuously updated to match the current exam domains, including design of resilient architectures, secure applications, cost-optimized solutions, and performance-efficient workloads in AWS.
               </div>
             </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>Do I need to have prior AWS experience?</span>
-                </button>
-                <div id="collapseFive" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    No prior AWS experience is required, but some general IT knowledge is helpful. Our platform adapts to your existing knowledge level and fills in gaps accordingly. For complete beginners, we recommend starting with the AWS Cloud Practitioner certification before advancing to specialty certifications.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
-              <div class="accordion">
-                <button
-                  class="ud-faq-btn collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix"
-                >
-                  <span class="icon flex-shrink-0">
-                    <i class="lni lni-chevron-down"></i>
-                  </span>
-                  <span>What makes your AI different from other study platforms?</span>
-                </button>
-                <div id="collapseSix" class="accordion-collapse collapse">
-                  <div class="ud-faq-body">
-                    Unlike traditional learning platforms that offer static content, our AI agent continuously adapts to your learning style and knowledge gaps. It can explain complex topics in multiple ways if you don't understand the first explanation, and it provides personalized practice questions that precisely target your weak areas.
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+          <div class="accordion">
+            <button
+              class="ud-faq-btn"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              <span class="icon flex-shrink-0">
+                <i class="lni lni-chevron-down"></i>
+              </span>
+              <span>How does the 90% Pass Guarantee work?</span>
+            </button>
+            <div id="collapseThree" class="accordion-collapse collapse">
+              <div class="ud-faq-body">
+                If you complete our recommended study plan and don't pass your Solutions Architect exam on the first attempt, we'll cover your exam retake fee ($150 value) and provide specialized coaching to ensure your success on the next attempt. This guarantee is included in our Professional and Enterprise plans.
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- ====== FAQ End ====== -->
+      <div class="col-lg-6">
+        <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+          <div class="accordion">
+            <button
+              class="ud-faq-btn"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              <span class="icon flex-shrink-0">
+                <i class="lni lni-chevron-down"></i>
+              </span>
+              <span>How much time will I need to prepare for the Solutions Architect exam?</span>
+            </button>
+            <div id="collapseFour" class="accordion-collapse collapse">
+              <div class="ud-faq-body">
+                With our specialized Solutions Architect AI system, most users can prepare for the SAA exam in just 4-6 weeks of focused study. This is approximately 40% faster than traditional study methods, as our adaptive learning system eliminates wasted study time by targeting the specific exam domains that matter most.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+          <div class="accordion">
+            <button
+              class="ud-faq-btn"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              <span class="icon flex-shrink-0">
+                <i class="lni lni-chevron-down"></i>
+              </span>
+              <span>Do I need prior AWS experience for the Solutions Architect exam?</span>
+            </button>
+            <div id="collapseFive" class="accordion-collapse collapse">
+              <div class="ud-faq-body">
+                No prior AWS experience is required, but some general IT knowledge is helpful. Our Solutions Architect-specific platform begins with foundational concepts and progressively builds to advanced topics. For complete beginners, we include extra modules covering the fundamentals before advancing to the architecture-specific material.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+          <div class="accordion">
+            <button
+              class="ud-faq-btn"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              <span class="icon flex-shrink-0">
+                <i class="lni lni-chevron-down"></i>
+              </span>
+              <span>What sets your SAA Success AI apart from other AWS study platforms?</span>
+            </button>
+            <div id="collapseSix" class="accordion-collapse collapse">
+              <div class="ud-faq-body">
+                Unlike traditional AWS learning platforms that offer generic content, our SAA Success AI is specifically engineered for the Solutions Architect exam. It focuses on the key services that appear most frequently on the exam, provides architecture-specific scenario questions, and offers real-world design exercises that mirror what you'll face on test day.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== FAQ End ====== -->
+
 
     <!-- ====== Testimonials Start ====== -->
     <section id="testimonials" class="ud-testimonials">
@@ -610,9 +610,9 @@
               <a href="#" class="ud-main-btn cta-button" data-plan="professional">Pre-Order Now</a>
             </div>
           </div>
-          <div class="ud-about-image">
+          <!-- <div class="ud-about-image">
             <img src="assets/images/about/about-image.svg" alt="Special offer" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
